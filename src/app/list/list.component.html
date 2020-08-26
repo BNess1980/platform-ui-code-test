@@ -1,4 +1,46 @@
-<div class="list-container">
-  <h2>Providers</h2>
+<div class="list__container">
+  <section class="container__content" *ngIf="unselectedProviders.length !== 0">
+    <h2>Providers</h2>
 
+    <div class="card__content">
+      <div class="card card--add" *ngFor="let provider of unselectedProviders">
+        <address>
+          <strong>{{ provider.name }}</strong
+          ><br />
+          {{ provider.address }}<br />
+          {{ provider.phone }}
+        </address>
+        <button
+          role="button"
+          class="btn--add"
+          title="Save Provider"
+          (click)="addToSelected(provider)"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container__content" *ngIf="selectedProviders.length !== 0">
+    <h2>My Saved Providers</h2>
+    <div class="card__content">
+      <div class="card card--remove" *ngFor="let provider of selectedProviders">
+        <address>
+          <strong>{{ provider.name }}</strong
+          ><br />
+          {{ provider.address }}<br />
+          {{ provider.phone }}
+        </address>
+        <button
+          role="button"
+          class="btn--remove"
+          title="Remove Provider"
+          (click)="removeFromSelected(provider)"
+        >
+          X
+        </button>
+      </div>
+    </div>
+  </section>
 </div>

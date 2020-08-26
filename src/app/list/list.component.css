@@ -1,10 +1,82 @@
-.list-container {
+.list__container {
   padding: 0px 24px;
   height: 100vh;
   width: 96%;
   border: 1px solid lightgray;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
   border-bottom: 1px solid lightgray;
+}
+
+.container__content {
+  margin-bottom: 5em;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  display: flex;
+  background: #ededed;
+  width: 350px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #999;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-right: 25px;
+  text-align: left;
+}
+
+.card--add {
+  flex-direction: column;
+}
+
+.card--remove {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.saved__providers > ul {
+  list-style-type: none;
+}
+
+address {
+  font-size: 14px;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+
+.btn--add {
+  height: 40px;
+  width: 85px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  background: #005599;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn--remove {
+  background: gray;
+  color: white;
+  font-weight: bold;
+  border-radius: 100px;
+  border: none;
+  height: 25px;
+  width: 25px;
 }
